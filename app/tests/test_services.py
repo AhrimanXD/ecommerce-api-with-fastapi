@@ -36,7 +36,7 @@ def test_product_input():
                             price = 10.0,
                             stock = 300,
                             size = 10,
-                            unit = 'kg'
+                            unit = 'KG'
                             )
   return input
 
