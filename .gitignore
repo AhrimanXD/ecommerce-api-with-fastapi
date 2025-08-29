@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# FastAPI/UVicorn/dev stuff
+*.log
+*.sqlite*
+instance/
+.data/
+cache/
+
+# Environment & secrets
+.env
+.env.*
+secrets.*.json
+*.key
+*.pem
+*.p12
+credentials.json
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+
+
+# Docker
+**/.docker/

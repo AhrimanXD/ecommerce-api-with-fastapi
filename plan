@@ -1,0 +1,110 @@
+User --- done
+Product
+Category
+Review
+Cart
+CartItem
+OrderItem
+Order
+Payment
+Address --- done
+Phone Number -- done
+ProductImage
+
+User -----> Cart (1-1)
+User ------> Order (1 - Many)
+User ------> Address(1 - Many) --- done
+Product ----> Review(1 - Many)
+User -----> Review(1 -> Many)
+Product ---> ProductImage
+Product ------> CartItem (1 to 1)
+CartItem ------> Cart(Many -> 1)
+Order -----> Payment(1 -> 1)
+User ------> Payment(1 -> Many)
+User ------> PhoneNumber(1 -> Many)
+Product ----> OrderItem(1->1)
+Order ------> OrderItem(1 -> Many)
+User ----------> PhoneNumber(1->Many) --- done
+Order------>Address(Many -> 1)
+Order -----> PhoneNumber(Many -> 1)
+
+Product
+id
+name
+description
+price
+stock
+category_id -> Fk
+created_at
+updated_at
+
+Category
+id
+name
+
+
+ProductImage
+id
+image
+product_id
+
+User
+id
+username
+email
+first_name
+last_name
+password(hashed)
+is_admin
+
+Review
+id
+content
+user_id
+product_id
+created_at
+
+Cart
+id
+user_id
+
+CartItem
+product_id
+quantity
+cart_id
+
+Address
+id
+country
+state
+Address
+user_id
+
+PhoneNumber
+id
+user_id
+PhoneNumber
+
+OrderItem
+product_id
+quantity
+order_id
+
+
+Order
+id
+user_id
+status
+address_id
+phonenumber_id
+created_at
+checkout_id
+
+
+Payment
+id
+amount
+order
+created_at
+transaction_id
+status
