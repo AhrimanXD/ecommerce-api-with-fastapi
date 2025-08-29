@@ -49,8 +49,8 @@ A modern, robust, and fully-featured E-commerce backend API built with **FastAPI
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd ecommerce-api
+    git clone (https://github.com/AhrimanXD/ecommerce-api-with-fastapi.git/
+    cd ecommerce-api-with-fastapi
     ```
 
 2.  **Configure Environment (Optional):**
