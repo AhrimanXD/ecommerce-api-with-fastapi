@@ -13,8 +13,8 @@ No problem! Let's fix that. It's actually better to not have an `.env`
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd ecommerce-api
+    git clone https://github.com/AhrimanXD/ecommerce-api-with-fastapi/
+    cd ecommerce-api-with-fastapi
     ```
 
 2.  **Start the containers:**
