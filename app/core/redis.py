@@ -20,7 +20,7 @@ def _json_serializer(obj: Any) -> Any:
     # Raise TypeError for any other non-serializable type
     raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
 
-def set_cache(key: str, value: dict | list, ttl: int = 300):
+def set_cache(key: str, value: Any, ttl: int = 300):
     """Set data in cache with TTL (default 5 minutes). Handles datetime objects."""
     # Use the custom 'default' handler in json.dumps
     serialized_value = json.dumps(value, default=_json_serializer)

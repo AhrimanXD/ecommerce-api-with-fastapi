@@ -30,7 +30,7 @@ def read_products(session:Session, query: ProductQuerySchema):
   cache_key = f"products-{query.q}-{query.skip}-{query.limit}"
   cached_products = get_cache(cache_key)
   if cached_products:
-    logger.info("Cache hit for key: %s", cache_key)
+    logger.info(f"Cache hit for key: {cache_key}")
     return cached_products
   
   logger.debug(f"Cache miss for key: {cache_key}. Querying database.")
