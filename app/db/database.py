@@ -1,11 +1,11 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
-from app.core.config import DATABASE_URL, DEV
+from app.core.config import settings 
 from sqlalchemy.orm import DeclarativeBase
 from typing import Annotated
 from fastapi import Depends
 
-engine = create_engine(DATABASE_URL, echo=DEV, pool_pre_ping=True, pool_recycle=300, pool_size=10, max_overflow=20, pool_timeout=30)
+engine = create_engine(settings.DATABASE_URL, echo=settings.DEV, pool_pre_ping=True, pool_recycle=300, pool_size=10, max_overflow=20, pool_timeout=30)
 
 
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit = False)
